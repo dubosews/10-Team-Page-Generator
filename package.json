@@ -1,0 +1,14 @@
+{
+  "name": "c10-team-profile-generator",
+  "version": "1.0.0",
+  "description": "This is a command line prompt based team page generator. Built in terminal, produces an html page with team members.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wesley DuBose",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
