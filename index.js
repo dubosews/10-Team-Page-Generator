@@ -101,11 +101,11 @@ function addEmployee() {
             addIntern();
         }
         if (choice === "|| TEAM COMPLETE ||") {
-
+            
             fs.appendFile('./destination/teamPage.html', pageClose, function (err) {
                 if (err) throw err;
-              }); 
-                    
+              });
+            console.log("__Team HTML page has been successfully generated__");
         }
     })
 }
