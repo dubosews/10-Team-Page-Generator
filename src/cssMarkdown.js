@@ -1,18 +1,40 @@
 function generateMarkdown5(data) {
     return `
+    .teamMembers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
     .card {
         background-color: rgb(0, 115, 255);
-        width: fit-content;
+        width: 200px;
         border-radius: 20px;
         padding: 15px;
         font-family: Arial, Helvetica, sans-serif;
-        margin: auto;
+        margin: 10px;
         }
+
+    .title {
+        background-color: aliceblue;
+        color: gold;
+        font-size: 24pt;
+        display: flex;
+        justify-content: center;
+        width: 400px;
+        padding-top: 20px;
+        height: 100px;
+        border: 3px gold;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .header {
         background-color: rgba(255, 255, 255, 1);
         border-radius: 15px;
         padding: 15px;
         margin: 5px;
+        
     }
     .name {
         font-size: 26pt;

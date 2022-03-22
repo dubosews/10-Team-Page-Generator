@@ -13,12 +13,32 @@ const Intern = require('./lib/Intern');
 const managers = [];
 const engineers = [];
 const interns = [];
-
+var pageTop = `<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Employee Card Template</title>
+                    <link rel="stylesheet" href="teamPage.css">
+                </head>
+                <body>
+                <header class="title"> My Team Page</header>
+                <div class="teamMembers">`
+var pageClose = `</div>
+                </body>
+                </html>`
 
 
 createManager();
 
 function createManager() {
+    fs.writeFile('./destination/teamPage.html', pageTop, function (err) {
+        if (err) throw err;
+      });
+    fs.writeFile('./destination/teamPage.css', cssGenerate(), function (err) {
+        if (err) throw err;
+      });
     inquirer.prompt([
         {
             type: "input",
@@ -45,6 +65,10 @@ function createManager() {
 
 
         const manager = new Manager(name, id, email, officeNumber);
+
+        fs.appendFile('./destination/teamPage.html', manager.managerGenerate(), function (err) {
+            if (err) throw err;
+          });
 
         managers.push(manager);
 
@@ -77,7 +101,10 @@ function addEmployee() {
             addIntern();
         }
         if (choice === "|| TEAM COMPLETE ||") {
-            
+
+            fs.appendFile('./destination/teamPage.html', pageClose, function (err) {
+                if (err) throw err;
+              }); 
                     
         }
     })
@@ -111,6 +138,10 @@ function addEngineer() {
 
         const engineer = new Engineer(name, id, email, github);
 
+        fs.appendFile('./destination/teamPage.html', engineer.engineerGenerate(), function (err) {
+            if (err) throw err;
+          });
+
         engineers.push(engineer);
     
         addEmployee(engineer);
@@ -143,17 +174,22 @@ function addIntern() {
     .then(({name, id, email, school}) =>{
 
         const intern = new Intern(name, id, email, school);
+
+        fs.appendFile('./destination/teamPage.html', intern.internGenerate(), function (err) {
+            if (err) throw err;
+          });
         
         interns.push(intern);
 
         addEmployee();
-    })
-
-    
-
-    
+    })    
 }   
 
+function createTeam() {
+    
+    fs.readFile('./destination/teamPage.html',)
+    
+}
 
 }
 

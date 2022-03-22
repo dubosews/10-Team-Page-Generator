@@ -8,7 +8,10 @@ function generateMarkdown() {
         <title>Employee Card Template</title>
         <link rel="stylesheet" href="team.css">
     </head>
-    <body>`
+    <body>
+    <div id="memberCard"> </div>
+    </body>
+    </html>`
 }
   module.exports = generateMarkdown;
   
