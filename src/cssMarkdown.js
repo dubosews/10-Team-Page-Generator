@@ -8,7 +8,7 @@ function generateMarkdown5(data) {
     }
     .card {
         background-color: rgb(0, 115, 255);
-        width: 200px;
+        width: 300px;
         border-radius: 20px;
         padding: 15px;
         font-family: Arial, Helvetica, sans-serif;
@@ -37,7 +37,7 @@ function generateMarkdown5(data) {
         
     }
     .name {
-        font-size: 26pt;
+        font-size: 20pt;
         color: rgb(0, 115, 255);
     }
     .role {
