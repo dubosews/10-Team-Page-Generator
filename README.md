@@ -1,4 +1,6 @@
 # Object-Oriented Programming Challenge: Team Profile Generator
+<img src="./src/img/teamGenerateScreenshot.png"></img>
+<br>
 
 ## Table of Contents
   1. [Description](#description) 
